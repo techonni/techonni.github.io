@@ -10,9 +10,11 @@ export const SITE = {
   x: 'https://x.com/techonni',
   xHandle: '@techonni',
   locale: 'en',
-  newsletterFormAction: '',
-  newsletterEmailEntry: 'entry.EMAIL',
-  newsletterSourceEntry: 'entry.SOURCE',
+  newsletterFormAction: 'https://docs.google.com/forms/d/e/1FAIpQLSfs9xCOoFKH5zT9z2cmgvOtsRjE59axfKI_EtYDpx55DtoiHQ/formResponse',
+  newsletterNameEntry: 'entry.1110274731',
+  newsletterEmailEntry: 'entry.1946205931',
+  newsletterConsentEntry: 'entry.259827322',
+  newsletterSourceEntry: 'entry.452092755',
 } as const;
 
 export const PRODUCTS = [

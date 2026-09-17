@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://www.techonni.com/og-default.svg" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@techonni" />
-<link rel="stylesheet" href="/hub.css" />
+<link rel="stylesheet" href="/hub.css?v=9" />
 </head>
 <body>
 <a href="#main" class="sr-only">Skip to content</a>
@@ -57,13 +57,16 @@
     <section class="nl" aria-labelledby="newsletter-heading">
       <h2 id="newsletter-heading" class="nl-title">Studio notes</h2>
       <p class="nl-copy">Occasional notes on products, design, and learning. Clear English. No spam.</p>
-      <div class="nl-fallback">
-        <div class="nl-row" aria-disabled="true">
-          <input class="nl-email" type="email" disabled placeholder="Coming soon" aria-label="Email signup coming soon" />
-          <button class="nl-submit" type="button" disabled>Subscribe</button>
+      <form id="nl-form" class="nl-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfs9xCOoFKH5zT9z2cmgvOtsRjE59axfKI_EtYDpx55DtoiHQ/formResponse" method="POST" novalidate>
+        <input type="hidden" name="entry.452092755" value="www.techonni.com · studio hub" />
+        <input type="hidden" name="entry.259827322" value="Yes — I agree to receive emails from Techonni" />
+        <input type="hidden" name="entry.1110274731" value="—" />
+        <div class="nl-row">
+          <label class="sr-only" for="nl-email">Your email</label>
+          <input id="nl-email" class="nl-email" name="entry.1946205931" type="email" required autocomplete="email" placeholder="Enter your email address" />
+          <button id="nl-submit" class="nl-submit" type="submit">Subscribe</button>
         </div>
-        <p class="nl-note">Email signup connects next. Until then: <a href="https://t.me/EuroDeskFX" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://x.com/techonni" target="_blank" rel="noopener noreferrer">X @techonni</a></p>
-      </div>
+      </form>
     </section>
 
     <section class="section" aria-labelledby="creating-heading">
@@ -157,5 +160,26 @@
     <p class="copyright">© 2026 Techonni</p>
   </div>
 </footer>
+<script>
+(function () {
+  var form = document.getElementById('nl-form');
+  var email = document.getElementById('nl-email');
+  var btn = document.getElementById('nl-submit');
+  if (!form || !email || !btn) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!email.checkValidity()) { email.reportValidity(); return; }
+    var body = new FormData(form);
+    btn.classList.add('is-flash');
+    btn.disabled = true;
+    fetch(form.action, { method: 'POST', mode: 'no-cors', body: body }).catch(function () {});
+    email.value = '';
+    window.setTimeout(function () {
+      btn.classList.remove('is-flash');
+      btn.disabled = false;
+    }, 1000);
+  });
+})();
+</script>
 </body>
 </html>
