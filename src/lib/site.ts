@@ -7,10 +7,9 @@ export const SITE = {
   base: '/',
   email: 'hello@techonni.com',
   telegram: 'https://t.me/EuroDeskFX',
-  x: 'https://x.com/eurodeskfx',
-  xHandle: '@eurodeskfx',
+  x: 'https://x.com/techonni',
+  xHandle: '@techonni',
   locale: 'en',
-  // Google Form formResponse URL — fill when a Techonni newsletter form exists
   newsletterFormAction: '',
   newsletterEmailEntry: 'entry.EMAIL',
   newsletterSourceEntry: 'entry.SOURCE',
