@@ -1,0 +1,5 @@
+{
+  "buildCommand": "mkdir -p .vercel-out && cp index.html hub.css favicon.svg og-default.svg robots.txt .vercel-out/ && cp -R blog .vercel-out/blog && if [ -d public ]; then cp -R public/. .vercel-out/; fi",
+  "outputDirectory": ".vercel-out",
+  "framework": null
+}
