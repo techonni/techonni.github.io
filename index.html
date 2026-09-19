@@ -106,6 +106,12 @@
       </div>
       <ul class="item-list">
         <li>
+          <a class="item-link" href="https://fx.techonni.com/blog/pullback-vs-reversal-eurusd-gbpusd-beginners/" target="_blank" rel="noopener noreferrer">
+            <span class="item-title">Pullback vs reversal on EURUSD and GBPUSD: beginner guide <span class="arrow" aria-hidden="true">→</span></span>
+            <span class="item-desc">Learn how a pullback differs from a reversal on EURUSD and GBPUSD, how beginners label swings without guessing the next move, and soft study rules. Educational only — not financial advice.</span>
+          </a>
+        </li>
+        <li>
           <a class="item-link" href="https://fx.techonni.com/blog/false-breakout-eurusd-gbpusd-beginners/" target="_blank" rel="noopener noreferrer">
             <span class="item-title">What is a false breakout on EURUSD and GBPUSD? Beginner guide <span class="arrow" aria-hidden="true">→</span></span>
             <span class="item-desc">Learn what a false breakout means on EURUSD and GBPUSD, how it differs from a real break, how beginners study failed moves near support and resistance, and soft risk rules. Educational only — not financial advice.</span>
@@ -114,65 +120,12 @@
         <li>
           <a class="item-link" href="https://fx.techonni.com/blog/trailing-stop-eurusd-gbpusd-beginners/" target="_blank" rel="noopener noreferrer">
             <span class="item-title">What is a trailing stop on EURUSD and GBPUSD? Beginner guide <span class="arrow" aria-hidden="true">→</span></span>
-            <span class="item-desc">Learn what a trailing stop means on EURUSD and GBPUSD, how it differs from a fixed stop loss, how beginners study trail distance in a notebook, and soft risk rules. Educational only — not financial advice.</span>
-          </a>
-        </li>
-        <li>
-          <a class="item-link" href="https://fx.techonni.com/blog/round-numbers-eurusd-gbpusd-beginners/" target="_blank" rel="noopener noreferrer">
-            <span class="item-title">Round numbers on EURUSD and GBPUSD: beginner guide <span class="arrow" aria-hidden="true">→</span></span>
-            <span class="item-desc">Learn what round numbers mean on EURUSD and GBPUSD, why price often reacts near .00 .50 and .0000 levels, and how beginners study them with soft risk rules. Educational only — not financial advice.</span>
-          </a>
-        </li>
-        <li>
-          <a class="item-link" href="https://fx.techonni.com/blog/take-profit-orders-eurusd-gbpusd-beginners/" target="_blank" rel="noopener noreferrer">
-            <span class="item-title">What is a take-profit order on EURUSD and GBPUSD? Beginner guide <span class="arrow" aria-hidden="true">→</span></span>
             <span class="item-desc">Learn what a take-profit order means on EURUSD and GBPUSD, how it differs from a stop loss, how beginners set TP levels in a notebook, and soft study rules. Educational only — not financial advice.</span>
-          </a>
-        </li>
-        <li>
-          <a class="item-link" href="https://fx.techonni.com/blog/trend-vs-range-eurusd-gbpusd-beginners/" target="_blank" rel="noopener noreferrer">
-            <span class="item-title">Trend vs range on EURUSD and GBPUSD: beginner guide <span class="arrow" aria-hidden="true">→</span></span>
-            <span class="item-desc">Learn how to tell a trend from a range on EURUSD and GBPUSD, what higher highs and sideways swings mean, and how beginners study each mode with soft risk rules. Educational only — not financial advice.</span>
-          </a>
-        </li>
-        <li>
-          <a class="item-link" href="https://fx.techonni.com/blog/london-new-york-overlap-eurusd-gbpusd-beginners/" target="_blank" rel="noopener noreferrer">
-            <span class="item-title">What is the London–New York overlap for EURUSD and GBPUSD? <span class="arrow" aria-hidden="true">→</span></span>
-            <span class="item-desc">Learn what the London–New York overlap means for EURUSD and GBPUSD, when those hours usually run, how liquidity and spreads behave, and how beginners study the window calmly. Educational only — not financial advice.</span>
           </a>
         </li>
       </ul>
     </section>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="content-col footer-inner">
-    <div class="social-pills" aria-label="Social links">
-      <a class="pill" href="https://x.com/techonni" target="_blank" rel="noopener noreferrer">X</a>
-    </div>
-    <p class="copyright">© 2026 Techonni</p>
-  </div>
-</footer>
-<script>
-(function () {
-  var form = document.getElementById('nl-form');
-  var email = document.getElementById('nl-email');
-  var btn = document.getElementById('nl-submit');
-  if (!form || !email || !btn) return;
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (!email.checkValidity()) { email.reportValidity(); return; }
-    var body = new FormData(form);
-    btn.classList.add('is-flash');
-    btn.disabled = true;
-    fetch(form.action, { method: 'POST', mode: 'no-cors', body: body }).catch(function () {});
-    email.value = '';
-    window.setTimeout(function () {
-      btn.classList.remove('is-flash');
-      btn.disabled = false;
-    }, 1000);
-  });
-})();
-</script>
 </body>
 </html>
