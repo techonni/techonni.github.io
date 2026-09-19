@@ -19,6 +19,12 @@ export const SITE = {
 
 export const PRODUCTS = [
   {
+    title: 'Shop',
+    href: 'https://shop.techonni.com/',
+    description: 'Reels storefront on shop.techonni.com.',
+    external: true,
+  },
+  {
     title: 'Euro Desk FX',
     href: 'https://fx.techonni.com',
     description:
