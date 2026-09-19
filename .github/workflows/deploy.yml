@@ -19,13 +19,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Collect static files
+      - name: Collect draft-only files
         run: |
           mkdir _site
-          cp index.html hub.css favicon.svg og-default.svg robots.txt CNAME _site/
-          cp -R blog _site/blog
-          if [ -d public ]; then cp -R public/. _site/; fi
-          if [ -d work ]; then cp -R work _site/work; fi
+          cp offline/index.html offline/404.html offline/robots.txt _site/
+          cp CNAME _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
