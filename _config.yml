@@ -1,0 +1,21 @@
+# Draft / brouillon: the hub still uses GitHub's legacy branch publisher
+# (pages-build-deployment). Exclude studio files so only the stub is public.
+# Remove this file, restore index.html / robots.txt from git, and add back
+# .nojekyll to republish the hub.
+theme: null
+exclude:
+  - blog
+  - work
+  - src
+  - node_modules
+  - public
+  - offline
+  - hub.css
+  - package.json
+  - package-lock.json
+  - astro.config.mjs
+  - tsconfig.json
+  - README.md
+  - sitemap-0.xml
+  - sitemap-index.xml
+  - vercel.json
